@@ -7,7 +7,6 @@
   "arrowParens": "always",
   "endOfLine": "lf",
   "bracketSpacing": true,
-  "jsxBracketSameLine": false,
   "quoteProps": "as-needed",
   "htmlWhitespaceSensitivity": "ignore"
 }
