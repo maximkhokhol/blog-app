@@ -1,0 +1,11 @@
+.single {
+    display: flex;
+}
+
+
+@media screen and (max-width: 768px) {
+    .single {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
