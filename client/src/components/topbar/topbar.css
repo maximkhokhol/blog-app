@@ -49,6 +49,13 @@
   color: gray;
 }
 
+.topListItem.active {
+  font-weight: bold;
+  color: #292929;
+  border-bottom: 2px solid #292929;
+}
+
+
 .topImg {
   width: 40px;
   height: 40px;
