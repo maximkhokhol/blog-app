@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useContext, useRef, useState} from 'react';
+import { useContext, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import './login.css';
@@ -13,7 +13,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: 'LOGIN_START' });
-    setErrorMessage(''); 
+    setErrorMessage('');
 
     try {
       const res = await axios.post('/api/auth/login', {
@@ -22,7 +22,7 @@ export default function Login() {
       });
       dispatch({ type: 'LOGIN_SUCCESS', payload: res.data });
     } catch (err) {
-      setErrorMessage(err.response?.data || 'Something went wrong!'); 
+      setErrorMessage(err.response?.data || 'Something went wrong!');
       dispatch({ type: 'LOGIN_FAILURE' });
     }
   };

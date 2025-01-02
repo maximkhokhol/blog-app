@@ -34,10 +34,9 @@ router.post('/login', async (req, res) => {
       return res.status(400).json('Wrong credentials!');
     }
 
-    const { password, ...others } = user._doc;
-    res.status(200).json(others);
+    res.status(200).json({ ...user._doc, password: undefined });
   } catch (err) {
-    console.error('Error during login:', err); 
+    console.error('Error during login:', err);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
