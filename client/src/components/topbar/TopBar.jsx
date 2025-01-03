@@ -86,7 +86,7 @@ export default function Topbar() {
             />
           </Link>
         ) : (
-          <ul className="topList">
+          <ul className="topList myTopList">
             <li className="topListItem">
               <Link className="link" to="/login">
                 LOGIN

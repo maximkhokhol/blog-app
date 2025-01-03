@@ -6,6 +6,19 @@ const bcrypt = require('bcrypt');
 //UPDATE
 router.put('/:id', async (req, res) => {
   if (req.body.userId === req.params.id) {
+    try {
+      const user = await User.findById(req.params.id);
+      if (!user) {
+        return res.status(404).json('User not found!');
+      }
+
+      if (req.body.password) {
+        const salt = await bcrypt.genSalt(10);
+        req.body.password = await bcrypt.hash(req.body.password, salt);
+      } else {
+        req.body.password = user.password;
+      }
+
     if (req.body.password) {
       const salt = await bcrypt.genSalt(10);
       req.body.password = await bcrypt.hash(req.body.password, salt);

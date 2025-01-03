@@ -8,4 +8,14 @@
     .home {
         flex-direction: column;
     }
+.home {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column;
+    }
 }
