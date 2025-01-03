@@ -1,13 +1,24 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./topbar.css";
+import { useContext } from 'react';
+import { Context } from '../../context/Context';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './topbar.css';
 
 export default function Topbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const user = true;
+  const { user, dispatch } = useContext(Context);
+  const location = useLocation();
+
+  const PF = 'http://localhost:5000/images/';
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const isActive = (path) => location.pathname === path;
+
+  const handleLogout = () => {
+    dispatch({ type: 'LOGOUT' });
   };
 
   return (
@@ -18,22 +29,48 @@ export default function Topbar() {
         <i className="topIcon fab fa-pinterest-square"></i>
         <i className="topIcon fab fa-twitter-square"></i>
       </div>
-      <div className={`topCenter ${isMenuOpen ? "mobileMenu" : ""}`}>
+      <div className={`topCenter ${isMenuOpen ? 'mobileMenu' : ''}`}>
         <ul className="topList">
-          <li className="topListItem">
-            <Link className="link" to="/" onClick={() => setIsMenuOpen(false)}>
+          <li
+            className={`topListItem ${isActive('/') ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Link className="link" to="/">
               HOME
             </Link>
           </li>
-          <li className="topListItem">ABOUT</li>
-          <li className="topListItem">CONTACT</li>
-          <li className="topListItem">
-            <Link className="link" to="/write" onClick={() => setIsMenuOpen(false)}>
+          <li
+            className={`topListItem ${isActive('/about') ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Link className="link" to="/about">
+              ABOUT
+            </Link>
+          </li>
+          <li
+            className={`topListItem ${isActive('/contact') ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Link className="link" to="/contact">
+              CONTACT
+            </Link>
+          </li>
+          <li
+            className={`topListItem ${isActive('/write') ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Link className="link" to="/write">
               WRITE
             </Link>
           </li>
           {user && (
-            <li className="topListItem" onClick={() => setIsMenuOpen(false)}>
+            <li
+              className="topListItem"
+              onClick={() => {
+                setIsMenuOpen(false);
+                handleLogout();
+              }}
+            >
               LOGOUT
             </li>
           )}
@@ -44,12 +81,12 @@ export default function Topbar() {
           <Link className="link" to="/settings">
             <img
               className="topImg"
-              src="https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-              alt=""
+              src={user.profilePic ? PF + user.profilePic : PF + 'profile.jpg'}
+              alt={user.username}
             />
           </Link>
         ) : (
-          <ul className="topList">
+          <ul className="topList myTopList">
             <li className="topListItem">
               <Link className="link" to="/login">
                 LOGIN
@@ -62,9 +99,10 @@ export default function Topbar() {
             </li>
           </ul>
         )}
+
         <i className="topSearchIcon fas fa-search"></i>
         <div className="hamburger" onClick={toggleMenu}>
-          <i className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"}`}></i>
+          <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
         </div>
       </div>
     </div>
