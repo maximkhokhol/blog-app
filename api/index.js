@@ -1,5 +1,8 @@
 const express = require('express');
 const cors = require('cors');
+
+const app = express();
+
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const authRoute = require('./routes/auth');
@@ -16,6 +19,9 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use('/images', express.static(path.join(__dirname, '/images')));
+app.use(express.json());
+app.use('/images', express.static(path.join(__dirname, '/images')));
+
 app.use(
   cors({
     origin: 'http://localhost:5173',

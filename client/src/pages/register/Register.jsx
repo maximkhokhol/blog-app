@@ -12,7 +12,6 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(false);
-
     if (username.trim().length < 3) {
       setError('Username must be at least 3 characters.');
       return;
