@@ -1,0 +1,943 @@
+Statistical profiling result from isolate-0x140008000-46289-v8.log, (7037 ticks, 28 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     55    0.8%          /usr/lib/system/libsystem_malloc.dylib
+     35    0.5%          /usr/lib/system/libsystem_c.dylib
+     28    0.4%          /usr/lib/system/libsystem_pthread.dylib
+     27    0.4%          /usr/lib/system/libsystem_kernel.dylib
+     18    0.3%          /usr/lib/libc++.1.dylib
+      7    0.1%          /usr/lib/system/libdyld.dylib
+      4    0.1%          /usr/lib/system/libsystem_platform.dylib
+      4    0.1%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     12    0.2%    0.2%  LazyCompile: *deserializeObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+     11    0.2%    0.2%  LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      9    0.1%    0.1%  LazyCompile: *clone /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/clone.js:30:15
+      6    0.1%    0.1%  LazyCompile: *_init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:690:17
+      6    0.1%    0.1%  LazyCompile: *Document /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:73:18
+      5    0.1%    0.1%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      4    0.1%    0.1%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      4    0.1%    0.1%  LazyCompile: *readableAddChunk node:internal/streams/readable:286:26
+      4    0.1%    0.1%  LazyCompile: *get /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/get.js:8:30
+      4    0.1%    0.1%  LazyCompile: *$__applyDefaults /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:367:26
+      3    0.0%    0.0%  RegExp: ^\/?$
+      3    0.0%    0.0%  RegExp: ^[A-Za-z0-9][A-Za-z0-9!#$&^_.-]{0,126}$
+      3    0.0%    0.0%  LazyCompile: *writeOrBuffer node:internal/streams/writable:368:23
+      3    0.0%    0.0%  LazyCompile: *setHeader node:_http_outgoing:646:57
+      3    0.0%    0.0%  LazyCompile: *serializeInto /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/serializer.js:674:43
+      3    0.0%    0.0%  LazyCompile: *resolve node:path:1091:10
+      3    0.0%    0.0%  LazyCompile: *parserOnIncoming node:_http_server:1027:26
+      3    0.0%    0.0%  LazyCompile: *matchKnownFields node:_http_incoming:279:26
+      3    0.0%    0.0%  LazyCompile: *hasHooks node:internal/async_hooks:468:18
+      3    0.0%    0.0%  LazyCompile: *handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:136:31
+      3    0.0%    0.0%  LazyCompile: *_storeHeader node:_http_outgoing:415:22
+      3    0.0%    0.0%  LazyCompile: *Query /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:63:15
+      3    0.0%    0.0%  LazyCompile: *Document.get /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:1628:34
+      3    0.0%    0.0%  LazyCompile: *<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/utils.js:23:54
+      3    0.0%    0.0%  Function: ^read /Users/alexsandr/Downloads/blog-app_2/api/node_modules/body-parser/lib/read.js:40:15
+      3    0.0%    0.0%  Function: ^parse /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/msg.js:178:8
+      3    0.0%    0.0%  Function: ^next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/route.js:121:16
+      3    0.0%    0.0%  Function: ^messageHandler /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection.js:251:33
+      3    0.0%    0.0%  Function: ^hasbody /Users/alexsandr/Downloads/blog-app_2/api/node_modules/type-is/index.js:92:18
+      3    0.0%    0.0%  Function: ^ObjectId.cast /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/objectid.js:224:35
+      3    0.0%    0.0%  Function: ^Document.toJSON /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3822:37
+      2    0.0%    0.0%  RegExp: ^\/api\/users\/?(?=\/|$)
+      2    0.0%    0.0%  RegExp: ^\/api\/posts\/?(?=\/|$)
+      2    0.0%    0.0%  RegExp: ^(?:\/([^/]+?))\/?$
+      2    0.0%    0.0%  RegExp: \.\d+
+      2    0.0%    0.0%  RegExp: [\x00-\x1f\x27\x5c\x7f-\x9f]|[\ud800-\udbff](?![\udc00-\udfff])|(?<![\ud800-\udbff])[\udc00-\udfff]
+      2    0.0%    0.0%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      2    0.0%    0.0%  LazyCompile: *trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      2    0.0%    0.0%  LazyCompile: *serializeString /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/serializer.js:28:31
+      2    0.0%    0.0%  LazyCompile: *removeListener node:events:679:28
+      2    0.0%    0.0%  LazyCompile: *read /Users/alexsandr/Downloads/blog-app_2/api/node_modules/body-parser/lib/read.js:40:15
+      2    0.0%    0.0%  LazyCompile: *onParserExecute node:_http_server:818:25
+      2    0.0%    0.0%  LazyCompile: *nextTick node:internal/process/task_queues:103:18
+      2    0.0%    0.0%  LazyCompile: *get node:internal/streams/readable:109:8
+      2    0.0%    0.0%  LazyCompile: *get node:internal/streams/duplex:103:8
+      2    0.0%    0.0%  LazyCompile: *expressInit /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/middleware/init.js:29:30
+      2    0.0%    0.0%  LazyCompile: *end node:_http_outgoing:1004:45
+      2    0.0%    0.0%  LazyCompile: *ReadableState node:internal/streams/readable:154:23
+      2    0.0%    0.0%  LazyCompile: *Readable.read node:internal/streams/readable:446:35
+      2    0.0%    0.0%  LazyCompile: *EventEmitter.init node:events:341:29
+      2    0.0%    0.0%  Function: ^validateString node:internal/validators:160:24
+      2    0.0%    0.0%  Function: ^strictContentLength node:_http_outgoing:857:29
+      2    0.0%    0.0%  Function: ^set node:internal/streams/readable:110:8
+      2    0.0%    0.0%  Function: ^readDoubleForwards node:internal/buffer:561:28
+      2    0.0%    0.0%  Function: ^parse /Users/alexsandr/Downloads/blog-app_2/api/node_modules/content-type/index.js:106:16
+      2    0.0%    0.0%  Function: ^onceWrapper node:events:626:21
+      2    0.0%    0.0%  Function: ^next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:140:22
+      2    0.0%    0.0%  Function: ^length /Users/alexsandr/Downloads/blog-app_2/api/node_modules/denque/index.js:85:23
+      2    0.0%    0.0%  Function: ^insert node:internal/timers:360:16
+      2    0.0%    0.0%  Function: ^init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/query/completeMany.js:28:16
+      2    0.0%    0.0%  Function: ^init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:676:14
+      2    0.0%    0.0%  Function: ^header /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:777:29
+      2    0.0%    0.0%  Function: ^getEncodingOps node:buffer:723:24
+      2    0.0%    0.0%  Function: ^get waitQueueSize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection_pool.js:203:20
+      2    0.0%    0.0%  Function: ^get node:internal/bootstrap/node:404:8
+      2    0.0%    0.0%  Function: ^get description /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology.js:235:18
+      2    0.0%    0.0%  Function: ^get description /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/server.js:168:18
+      2    0.0%    0.0%  Function: ^etag /Users/alexsandr/Downloads/blog-app_2/api/node_modules/etag/index.js:70:15
+      2    0.0%    0.0%  Function: ^endReadableNT node:internal/streams/readable:1393:23
+      2    0.0%    0.0%  Function: ^done /Users/alexsandr/Downloads/blog-app_2/api/node_modules/raw-body/index.js:213:17
+      2    0.0%    0.0%  Function: ^copy /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bl/bl.js:138:43
+      2    0.0%    0.0%  Function: ^clearBuffer node:internal/streams/writable:532:21
+      2    0.0%    0.0%  Function: ^Schema.path /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema.js:628:33
+      2    0.0%    0.0%  Function: ^Query.setOptions /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mquery/lib/mquery.js:170:38
+      2    0.0%    0.0%  Function: ^OperationBase /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/operations/operation.js:22:14
+      2    0.0%    0.0%  Function: ^Model.$handleCallbackError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:5070:38
+      2    0.0%    0.0%  Function: ^Long.compare /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/long.js:306:34
+      2    0.0%    0.0%  Function: ^IncomingMessage node:_http_incoming:53:25
+      2    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:5098:18
+      2    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/server_selection.js:183:18
+      2    0.0%    0.0%  Function: ^$set /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:946:40
+      1    0.0%    0.0%  RegExp: ^text\/|^application\/(javascript|json)
+      1    0.0%    0.0%  RegExp: ^\/images\/?(?=\/|$)
+      1    0.0%    0.0%  RegExp: ^\/api\/auth\/?(?=\/|$)
+      1    0.0%    0.0%  RegExp: ^[A-Za-z0-9][A-Za-z0-9!#$&^_-]{0,126}$
+      1    0.0%    0.0%  RegExp: ^[!#$%&'*+\-.^_`|~0-9A-Za-z]+$
+      1    0.0%    0.0%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.0%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.0%  RegExp: ^ *([A-Za-z0-9][A-Za-z0-9!#$&^_-]{0,126})\/([A-Za-z0-9][A-Za-z0-9!#$&^_.+-]{0,126}) *$
+      1    0.0%    0.0%  RegExp: \x20{2}
+      1    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff] {1}
+      1    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.0%  RegExp: [\/<\(]([^:\/]+):(\d+):(?:\d+)\)?\s*$
+      1    0.0%    0.0%  RegExp: :\d{4}$|[^0-9a-z]
+      1    0.0%    0.0%  LazyCompile: *write_ node:_http_outgoing:868:16
+      1    0.0%    0.0%  LazyCompile: *writeHead node:_http_server:342:19
+      1    0.0%    0.0%  LazyCompile: *write node:buffer:637:12
+      1    0.0%    0.0%  LazyCompile: *slice node:buffer:638:12
+      1    0.0%    0.0%  LazyCompile: *set node:internal/streams/readable:110:8
+      1    0.0%    0.0%  LazyCompile: *send /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:111:25
+      1    0.0%    0.0%  LazyCompile: *readPackageScope node:internal/modules/package_json_reader:148:26
+      1    0.0%    0.0%  LazyCompile: *parserOnHeadersComplete node:_http_common:72:33
+      1    0.0%    0.0%  LazyCompile: *parse /Users/alexsandr/Downloads/blog-app_2/api/node_modules/vary/index.js:96:16
+      1    0.0%    0.0%  LazyCompile: *isValid /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/objectid.js:340:36
+      1    0.0%    0.0%  LazyCompile: *header /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:777:29
+      1    0.0%    0.0%  LazyCompile: *hasAspect /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/operations/operation.js:32:12
+      1    0.0%    0.0%  LazyCompile: *get node:internal/streams/readable:1196:8
+      1    0.0%    0.0%  LazyCompile: *flow node:internal/streams/readable:1061:14
+      1    0.0%    0.0%  LazyCompile: *exports.isObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mquery/lib/utils.js:279:43
+      1    0.0%    0.0%  LazyCompile: *endReadableNT node:internal/streams/readable:1393:23
+      1    0.0%    0.0%  LazyCompile: *emitCloseNT node:internal/streams/destroy:120:21
+      1    0.0%    0.0%  LazyCompile: *emit node:events:464:44
+      1    0.0%    0.0%  LazyCompile: *dirname node:path:1274:10
+      1    0.0%    0.0%  LazyCompile: *debug /Users/alexsandr/Downloads/blog-app_2/api/node_modules/body-parser/node_modules/debug/src/debug.js:65:17
+      1    0.0%    0.0%  LazyCompile: *callback node:internal/streams/writable:553:44
+      1    0.0%    0.0%  LazyCompile: *applySchemaTypeTransforms /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3734:35
+      1    0.0%    0.0%  LazyCompile: *applyHeaders /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:144:24
+      1    0.0%    0.0%  LazyCompile: *app.<computed> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/application.js:490:25
+      1    0.0%    0.0%  LazyCompile: *addListener node:events:608:58
+      1    0.0%    0.0%  LazyCompile: *_write node:internal/streams/writable:286:16
+      1    0.0%    0.0%  LazyCompile: *_copyActual node:buffer:244:21
+      1    0.0%    0.0%  LazyCompile: *_copy node:buffer:208:15
+      1    0.0%    0.0%  LazyCompile: *SchemaString.cast /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/string.js:582:39
+      1    0.0%    0.0%  LazyCompile: *SchemaArray.cast /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/array.js:323:38
+      1    0.0%    0.0%  LazyCompile: *Query.findOne /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:2289:35
+      1    0.0%    0.0%  LazyCompile: *OutgoingMessage node:_http_outgoing:107:25
+      1    0.0%    0.0%  LazyCompile: *ObjectID.toHexString /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/objectid.js:96:42
+      1    0.0%    0.0%  LazyCompile: *Document.<computed> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:195:45
+      1    0.0%    0.0%  LazyCompile: *Document.$toObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3279:40
+      1    0.0%    0.0%  LazyCompile: *CastError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/cast.js:21:14
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:2001:43
+      1    0.0%    0.0%  Function: ^writeOrBuffer node:internal/streams/writable:368:23
+      1    0.0%    0.0%  Function: ^writeHead node:_http_server:342:19
+      1    0.0%    0.0%  Function: ^write /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection.js:328:15
+      1    0.0%    0.0%  Function: ^vary /Users/alexsandr/Downloads/blog-app_2/api/node_modules/vary/index.js:133:15
+      1    0.0%    0.0%  Function: ^value /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/binary.js:234:40
+      1    0.0%    0.0%  Function: ^validate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1258:20
+      1    0.0%    0.0%  Function: ^unenroll node:timers:79:18
+      1    0.0%    0.0%  Function: ^typeis /Users/alexsandr/Downloads/blog-app_2/api/node_modules/type-is/index.js:43:17
+      1    0.0%    0.0%  Function: ^toBin /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/msg.js:80:8
+      1    0.0%    0.0%  Function: ^socketOnDrain node:_http_server:744:23
+      1    0.0%    0.0%  Function: ^setStreamTimeout node:internal/stream_base_commons:237:26
+      1    0.0%    0.0%  Function: ^setHeader node:_http_outgoing:646:57
+      1    0.0%    0.0%  Function: ^set node:net:2249:6
+      1    0.0%    0.0%  Function: ^set /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology.js:783:16
+      1    0.0%    0.0%  Function: ^set /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/server.js:431:16
+      1    0.0%    0.0%  Function: ^serialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/bson.js:47:46
+      1    0.0%    0.0%  Function: ^selectServer /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology.js:380:15
+      1    0.0%    0.0%  Function: ^runInAsyncScope node:async_hooks:197:18
+      1    0.0%    0.0%  Function: ^resetId /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/objectid.js:278:17
+      1    0.0%    0.0%  Function: ^release /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sessions.js:637:10
+      1    0.0%    0.0%  Function: ^readUInt8 node:internal/buffer:250:19
+      1    0.0%    0.0%  Function: ^readStream /Users/alexsandr/Downloads/blog-app_2/api/node_modules/raw-body/index.js:155:21
+      1    0.0%    0.0%  Function: ^readStart node:_http_incoming:42:19
+      1    0.0%    0.0%  Function: ^readPreferenceServerSelector /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/server_selection.js:178:38
+      1    0.0%    0.0%  Function: ^query /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/wireprotocol/query.js:14:15
+      1    0.0%    0.0%  Function: ^processWaitQueue /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection_pool.js:447:26
+      1    0.0%    0.0%  Function: ^peekFront /Users/alexsandr/Downloads/blog-app_2/api/node_modules/denque/index.js:68:48
+      1    0.0%    0.0%  Function: ^onwrite node:internal/streams/writable:428:17
+      1    0.0%    0.0%  Function: ^onStreamRead node:internal/stream_base_commons:167:22
+      1    0.0%    0.0%  Function: ^onData /Users/alexsandr/Downloads/blog-app_2/api/node_modules/raw-body/index.js:254:19
+      1    0.0%    0.0%  Function: ^normalizeType /Users/alexsandr/Downloads/blog-app_2/api/node_modules/type-is/index.js:237:24
+      1    0.0%    0.0%  Function: ^normalizeEncoding node:string_decoder:62:27
+      1    0.0%    0.0%  Function: ^nextTick node:internal/process/task_queues:103:18
+      1    0.0%    0.0%  Function: ^nextFunction /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/cursor.js:706:22
+      1    0.0%    0.0%  Function: ^module.exports /Users/alexsandr/Downloads/blog-app_2/api/node_modules/sliced/index.js:11:27
+      1    0.0%    0.0%  Function: ^model /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:4911:27
+      1    0.0%    0.0%  Function: ^maybeReadMore node:internal/streams/readable:657:23
+      1    0.0%    0.0%  Function: ^maybePromise /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/utils.js:679:22
+      1    0.0%    0.0%  Function: ^maxWireVersion /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/utils.js:72:24
+      1    0.0%    0.0%  Function: ^isUint8Array node:internal/util/types:13:22
+      1    0.0%    0.0%  Function: ^isTraceHTTPEnabled node:internal/http:40:28
+      1    0.0%    0.0%  Function: ^isSelected /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:2101:52
+      1    0.0%    0.0%  Function: ^isBuffer node:buffer:554:36
+      1    0.0%    0.0%  Function: ^hasSessionSupport /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/wireprotocol/command.js:155:27
+      1    0.0%    0.0%  Function: ^hasSessionSupport /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology.js:467:20
+      1    0.0%    0.0%  Function: ^handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/layer.js:86:49
+      1    0.0%    0.0%  Function: ^handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:136:31
+      1    0.0%    0.0%  Function: ^getcontenttype /Users/alexsandr/Downloads/blog-app_2/api/node_modules/content-type/index.js:177:25
+      1    0.0%    0.0%  Function: ^getTimerDuration node:internal/timers:393:26
+      1    0.0%    0.0%  Function: ^getHeader node:_http_outgoing:714:57
+      1    0.0%    0.0%  Function: ^getCodec /Users/alexsandr/Downloads/blog-app_2/api/node_modules/iconv-lite/lib/index.js:63:35
+      1    0.0%    0.0%  Function: ^get session /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/operations/operation.js:43:14
+      1    0.0%    0.0%  Function: ^get serverSession /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sessions.js:112:20
+      1    0.0%    0.0%  Function: ^get node:net:698:16
+      1    0.0%    0.0%  Function: ^get node:internal/streams/writable:846:8
+      1    0.0%    0.0%  Function: ^get node:internal/streams/writable:790:8
+      1    0.0%    0.0%  Function: ^get node:internal/streams/readable:1236:18
+      1    0.0%    0.0%  Function: ^get hasSubscribers node:diagnostics_channel:199:21
+      1    0.0%    0.0%  Function: ^get hasDataBearingServers /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology_description.js:284:28
+      1    0.0%    0.0%  Function: ^get /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/db.js:278:16
+      1    0.0%    0.0%  Function: ^get /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/db.js:244:16
+      1    0.0%    0.0%  Function: ^fromString node:buffer:476:20
+      1    0.0%    0.0%  Function: ^flow node:internal/streams/readable:1061:14
+      1    0.0%    0.0%  Function: ^firstchar /Users/alexsandr/Downloads/blog-app_2/api/node_modules/body-parser/lib/types/json.js:188:20
+      1    0.0%    0.0%  Function: ^fastparse /Users/alexsandr/Downloads/blog-app_2/api/node_modules/parseurl/index.js:95:20
+      1    0.0%    0.0%  Function: ^exports.get /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mpath/lib/index.js:39:23
+      1    0.0%    0.0%  Function: ^executeCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/operations/execute_operation.js:57:29
+      1    0.0%    0.0%  Function: ^execute /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/operations/insert_one.js:15:10
+      1    0.0%    0.0%  Function: ^exec /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4494:37
+      1    0.0%    0.0%  Function: ^encodeUrl /Users/alexsandr/Downloads/blog-app_2/api/node_modules/encodeurl/index.js:56:20
+      1    0.0%    0.0%  Function: ^done /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/cursor.js:452:18
+      1    0.0%    0.0%  Function: ^doWrite node:internal/streams/writable:401:17
+      1    0.0%    0.0%  Function: ^dirname node:path:1274:10
+      1    0.0%    0.0%  Function: ^detachSocket node:_http_server:293:62
+      1    0.0%    0.0%  Function: ^deserializeObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      1    0.0%    0.0%  Function: ^deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      1    0.0%    0.0%  Function: ^defaultId /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/objectid.js:272:19
+      1    0.0%    0.0%  Function: ^decorateCommand /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/utils.js:236:31
+      1    0.0%    0.0%  Function: ^debug /Users/alexsandr/Downloads/blog-app_2/api/node_modules/body-parser/node_modules/debug/src/debug.js:65:17
+      1    0.0%    0.0%  Function: ^createWriteWrap node:internal/stream_base_commons:109:25
+      1    0.0%    0.0%  Function: ^createHtmlDocument /Users/alexsandr/Downloads/blog-app_2/api/node_modules/finalhandler/index.js:43:29
+      1    0.0%    0.0%  Function: ^connectionIsStale /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection_pool.js:377:27
+      1    0.0%    0.0%  Function: ^close /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cursor.js:926:8
+      1    0.0%    0.0%  Function: ^cloneObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mquery/lib/utils.js:66:43
+      1    0.0%    0.0%  Function: ^checkType /Users/alexsandr/Downloads/blog-app_2/api/node_modules/body-parser/lib/types/json.js:244:29
+      1    0.0%    0.0%  Function: ^checkOut /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection_pool.js:214:11
+      1    0.0%    0.0%  Function: ^checkListener node:events:269:23
+      1    0.0%    0.0%  Function: ^checkInvalidHeaderChar node:_http_common:223:32
+      1    0.0%    0.0%  Function: ^checkError node:internal/streams/destroy:23:20
+      1    0.0%    0.0%  Function: ^castString /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/cast/string.js:16:37
+      1    0.0%    0.0%  Function: ^castNumber /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/cast/number.js:16:37
+      1    0.0%    0.0%  Function: ^castDate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/cast/date.js:5:35
+      1    0.0%    0.0%  Function: ^callbackWithRetry /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/operations/execute_operation.js:110:29
+      1    0.0%    0.0%  Function: ^callMiddlewareFunction /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:480:32
+      1    0.0%    0.0%  Function: ^calculateDurationInMs /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/utils.js:715:31
+      1    0.0%    0.0%  Function: ^assignSocket node:_http_server:282:62
+      1    0.0%    0.0%  Function: ^applySchemaTypeTransforms /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3734:35
+      1    0.0%    0.0%  Function: ^append node:internal/linkedlist:30:16
+      1    0.0%    0.0%  Function: ^append /Users/alexsandr/Downloads/blog-app_2/api/node_modules/vary/index.js:38:17
+      1    0.0%    0.0%  Function: ^app.<computed> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/application.js:490:25
+      1    0.0%    0.0%  Function: ^app /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/express.js:38:21
+      1    0.0%    0.0%  Function: ^afterWrite node:internal/streams/writable:490:20
+      1    0.0%    0.0%  Function: ^adjustOffset node:buffer:1144:22
+      1    0.0%    0.0%  Function: ^addQuotes node:internal/util/inspect:478:19
+      1    0.0%    0.0%  Function: ^addListener node:events:608:58
+      1    0.0%    0.0%  Function: ^_write node:internal/streams/writable:286:16
+      1    0.0%    0.0%  Function: ^_read node:_http_incoming:205:49
+      1    0.0%    0.0%  Function: ^_initializeCursor /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cursor.js:172:20
+      1    0.0%    0.0%  Function: ^_getPathsToValidate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:2320:29
+      1    0.0%    0.0%  Function: ^_getPath /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema.js:837:18
+      1    0.0%    0.0%  Function: ^_command /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/wireprotocol/command.js:41:18
+      1    0.0%    0.0%  Function: ^_checkContext /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:1194:23
+      1    0.0%    0.0%  Function: ^_changeState /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/statemachine.js:74:60
+      1    0.0%    0.0%  Function: ^Writable.cork node:internal/streams/writable:340:35
+      1    0.0%    0.0%  Function: ^StringDecoder node:string_decoder:82:23
+      1    0.0%    0.0%  Function: ^Socket.read node:net:776:33
+      1    0.0%    0.0%  Function: ^Socket._read node:net:714:34
+      1    0.0%    0.0%  Function: ^Socket.<computed> node:net:927:46
+      1    0.0%    0.0%  Function: ^SchemaType.splitPath /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:135:42
+      1    0.0%    0.0%  Function: ^SchemaType.doValidate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1183:43
+      1    0.0%    0.0%  Function: ^SchemaDate.cast /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/date.js:341:37
+      1    0.0%    0.0%  Function: ^Schema.pathType /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema.js:1160:37
+      1    0.0%    0.0%  Function: ^Readable.resume node:internal/streams/readable:1016:37
+      1    0.0%    0.0%  Function: ^Readable.removeAllListeners node:internal/streams/readable:975:49
+      1    0.0%    0.0%  Function: ^ReadPreference.slaveOk /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/topologies/read_preference.js:209:44
+      1    0.0%    0.0%  Function: ^ReadPreference.resolve /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/topologies/read_preference.js:135:34
+      1    0.0%    0.0%  Function: ^ReadPreference.isValid /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/topologies/read_preference.js:186:34
+      1    0.0%    0.0%  Function: ^ReadPreference.fromOptions /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/topologies/read_preference.js:104:38
+      1    0.0%    0.0%  Function: ^Query._castConditions /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:1973:43
+      1    0.0%    0.0%  Function: ^ObjectID.get_inc /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/objectid.js:129:38
+      1    0.0%    0.0%  Function: ^Mongoose.set /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/index.js:182:34
+      1    0.0%    0.0%  Function: ^Model /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:100:15
+      1    0.0%    0.0%  Function: ^Long.getLowBitsUnsigned /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/long.js:175:45
+      1    0.0%    0.0%  Function: ^Kareem.execPre /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:8:36
+      1    0.0%    0.0%  Function: ^Kareem.execPost /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:120:37
+      1    0.0%    0.0%  Function: ^EventEmitter.init node:events:341:29
+      1    0.0%    0.0%  Function: ^Document.validate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:2251:39
+      1    0.0%    0.0%  Function: ^Document.init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:569:35
+      1    0.0%    0.0%  Function: ^Document.$__path /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:1703:38
+      1    0.0%    0.0%  Function: ^Document.$__init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:588:38
+      1    0.0%    0.0%  Function: ^Document.$__getValue /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:1592:42
+      1    0.0%    0.0%  Function: ^Document.$__dirty /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3064:39
+      1    0.0%    0.0%  Function: ^BufferList.<computed> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bl/bl.js:383:44
+      1    0.0%    0.0%  Function: ^AsyncResource node:async_hooks:160:14
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/posts.js:41:23
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4562:18
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4527:30
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4509:38
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:2001:43
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:503:58
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:376:31
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:32:16
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:2537:23
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cursor.js:838:41
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/monitor.js:396:7
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:370:24
+      1    0.0%    0.0%  Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:280:64
+
+ [C++]:
+   ticks  total  nonlib   name
+   3117   44.3%   45.4%  T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+   2919   41.5%   42.6%  T _posix_spawnattr_setmacpolicyinfo_np
+     85    1.2%    1.2%  T _semaphore_destroy
+     66    0.9%    1.0%  T node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     49    0.7%    0.7%  T _mach_vm_map
+     28    0.4%    0.4%  T _mach_get_times
+     18    0.3%    0.3%  T _mach_port_type
+     15    0.2%    0.2%  t __os_once_gate_broadcast
+     10    0.1%    0.1%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    0.1%    0.1%  T _mig_dealloc_reply_port
+      8    0.1%    0.1%  T __simple_getenv
+      5    0.1%    0.1%  T _os_unfair_recursive_lock_unlock
+      5    0.1%    0.1%  T _mach_port_allocate
+      4    0.1%    0.1%  T __platform_strcmp
+      3    0.0%    0.0%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      3    0.0%    0.0%  t std::__1::__hash_table<unsigned long, std::__1::hash<unsigned long>, std::__1::equal_to<unsigned long>, std::__1::allocator<unsigned long> >::remove(std::__1::__hash_const_iterator<std::__1::__hash_node<unsigned long, void*>*>)
+      3    0.0%    0.0%  t ___pfz_setup
+      3    0.0%    0.0%  T node::AsyncWrap::EmitTraceEventBefore()
+      3    0.0%    0.0%  T _os_unfair_recursive_lock_lock_with_options
+      3    0.0%    0.0%  T _fcntl
+      3    0.0%    0.0%  T _OSAtomicDecrement32
+      2    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      2    0.0%    0.0%  t node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t __os_once_gate_wait
+      2    0.0%    0.0%  T node::Environment::RunWeakRefCleanup()
+      2    0.0%    0.0%  T node::Emit(node::Environment*, double, node::AsyncHooks::Fields, v8::Local<v8::Function>)
+      2    0.0%    0.0%  T node::AsyncWrap::EmitTraceEventAfter(node::AsyncWrap::ProviderType, double)
+      2    0.0%    0.0%  T __simple_putline
+      1    0.0%    0.0%  t void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+      1    0.0%    0.0%  t void node::cares_wrap::(anonymous namespace)::Query<node::cares_wrap::QueryWrap<node::cares_wrap::TxtTraits> >(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)0>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)5>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t __pthread_set_main_qos
+      1    0.0%    0.0%  t __pthread_mutex_firstfit_lock_slow
+      1    0.0%    0.0%  T node::binding::DLOpen(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::NodeArrayBufferAllocator::AllocateUninitialized(unsigned long)
+      1    0.0%    0.0%  T node::InternalCallbackScope::InternalCallbackScope(node::Environment*, v8::Local<v8::Object>, node::async_context const&, int)
+      1    0.0%    0.0%  T node::InternalCallbackScope::InternalCallbackScope(node::AsyncWrap*, int)
+      1    0.0%    0.0%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::Environment::RunAndClearNativeImmediates(bool)
+      1    0.0%    0.0%  T node::Environment::GetNow()
+      1    0.0%    0.0%  T node::AsyncWrap::MakeCallback(v8::Local<v8::Function>, int, v8::Local<v8::Value>*)
+      1    0.0%    0.0%  T node::AsyncWrap::AsyncReset(v8::Local<v8::Object>, double, bool)
+      1    0.0%    0.0%  T node::AsyncHooks::push_async_context(double, double, v8::Local<v8::Object>)
+      1    0.0%    0.0%  T _write
+      1    0.0%    0.0%  T _voucher_mach_msg_clear
+      1    0.0%    0.0%  T _task_dyld_process_info_notify_get
+      1    0.0%    0.0%  T _semaphore_create
+      1    0.0%    0.0%  T _kdebug_typefilter
+      1    0.0%    0.0%  T _OSAtomicIncrement32
+
+ [Summary]:
+   ticks  total  nonlib   name
+    435    6.2%    6.3%  JavaScript
+   6396   90.9%   93.2%  C++
+    185    2.6%    2.7%  GC
+    178    2.5%          Shared libraries
+     28    0.4%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   2928   93.4%   41.6%  T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+     79    2.5%    1.1%  T _semaphore_destroy
+     66    2.1%    0.9%  T node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     10    0.3%    0.1%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    0.3%    0.1%  t __os_once_gate_broadcast
+      5    0.2%    0.1%  T __simple_getenv
+      4    0.1%    0.1%  T _mig_dealloc_reply_port
+      3    0.1%    0.0%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      3    0.1%    0.0%  T _mach_get_times
+      3    0.1%    0.0%  T _fcntl
+      3    0.1%    0.0%  T _OSAtomicDecrement32
+      2    0.1%    0.0%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.0%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      2    0.1%    0.0%  t node::Buffer::(anonymous namespace)::ByteLengthUtf8(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.0%  t ___pfz_setup
+      2    0.1%    0.0%  T __simple_putline
+      1    0.0%    0.0%  t void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
+      1    0.0%    0.0%  t void node::cares_wrap::(anonymous namespace)::Query<node::cares_wrap::QueryWrap<node::cares_wrap::TxtTraits> >(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringWrite<(node::encoding)0>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)5>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t __os_once_gate_wait
+      1    0.0%    0.0%  T node::binding::DLOpen(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::NodeArrayBufferAllocator::AllocateUninitialized(unsigned long)
+      1    0.0%    0.0%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::Environment::GetNow()
+      1    0.0%    0.0%  T _voucher_mach_msg_clear
+      1    0.0%    0.0%  T _task_dyld_process_info_notify_get
+      1    0.0%    0.0%  T _kdebug_typefilter
+      1    0.0%    0.0%  T _OSAtomicIncrement32
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   3117   44.3%  T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+    234    7.5%    Function: ^internalCompileFunction node:internal/vm:72:33
+    231   98.7%      Function: ^wrapSafe node:internal/modules/cjs/loader:1252:18
+    230   99.6%        Function: ^Module._compile node:internal/modules/cjs/loader:1318:37
+    224   97.4%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1377:37
+    224  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1190:33
+      6    2.6%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1377:37
+      6  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1190:33
+      3    1.3%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1252:18
+      3  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1318:37
+      3  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1377:37
+      2   66.7%            Function: ^Module.load node:internal/modules/cjs/loader:1190:33
+      1   33.3%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1190:33
+    220    7.1%    T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+     14    6.4%      LazyCompile: *get /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/get.js:8:30
+      5   35.7%        Function: ^Query.cast /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4926:32
+      5  100.0%          Function: ^Query._castConditions /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:1973:43
+      4   80.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:2231:46
+      1   20.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:2001:43
+      3   21.4%        LazyCompile: *Document.$toObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3279:40
+      2   66.7%          Function: ^Document.toJSON /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3822:37
+      2  100.0%            T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   33.3%          Function: ^Document.toObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3559:39
+      1  100.0%            Function: ^Model.$__handleSave /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:239:41
+      3   21.4%        Function: ^getMessageFormat /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/cast.js:113:26
+      2   66.7%          Function: ^CastError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/cast.js:21:14
+      2  100.0%            Function: ^ObjectId.cast /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/objectid.js:224:35
+      1   33.3%          Function: ^init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/cast.js:50:7
+      1  100.0%            Function: ^CastError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/cast.js:21:14
+      1    7.1%        Function: ^Query /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:63:15
+      1  100.0%          Function: ^model.Query /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:4984:25
+      1  100.0%            Function: ^findOne /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:2248:33
+      1    7.1%        Function: ^NativeCollection.<computed> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:129:43
+      1  100.0%          Function: ^Model.$__handleSave /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:239:41
+      1  100.0%            Function: ^Model.$__save /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:375:35
+      1    7.1%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/timestamps/setupTimestamps.js:40:30
+      1  100.0%          Function: ^callMiddlewareFunction /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:480:32
+      1  100.0%            Function: ^next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:27:22
+     11    5.0%      Function: ^ObjectId.cast /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/objectid.js:224:35
+     11  100.0%        Function: ^SchemaType.applySetters /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1116:45
+     11  100.0%          LazyCompile: ~SchemaType._castForQuery /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1600:46
+     11  100.0%            LazyCompile: ~SchemaType.castForQuery /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1581:45
+     10    4.5%      LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      4   40.0%        LazyCompile: *handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:136:31
+      4  100.0%          Function: ^router /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:46:18
+      4  100.0%            LazyCompile: *trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      3   30.0%        LazyCompile: *cors /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:159:16
+      3  100.0%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:219:57
+      3  100.0%            Function: ^originCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:213:39
+      2   20.0%        Function: ^cors /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:159:16
+      2  100.0%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:219:57
+      2  100.0%            Function: ^originCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:213:39
+      1   10.0%        LazyCompile: *jsonParser /Users/alexsandr/Downloads/blog-app_2/api/node_modules/body-parser/lib/types/json.js:101:30
+      1  100.0%          LazyCompile: *trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      9    4.1%      LazyCompile: *deserializeObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      7   77.8%        LazyCompile: *deserializeObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      5   71.4%          LazyCompile: *deserializeObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      5  100.0%            LazyCompile: *deserializeObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+      2   28.6%          Function: ^deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      2  100.0%            Function: ^BSON.deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/bson.js:134:38
+      2   22.2%        Function: ^deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      2  100.0%          Function: ^BSON.deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/bson.js:134:38
+      2  100.0%            Function: ^parse /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/msg.js:178:8
+      8    3.6%      LazyCompile: *json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+      6   75.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/posts.js:70:17
+      6  100.0%          T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      6  100.0%            T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   12.5%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/users.js:16:20
+      1  100.0%          T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   12.5%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/categories.js:14:17
+      1  100.0%          T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    3.2%      LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      7    3.2%      Function: ^encodeUrl /Users/alexsandr/Downloads/blog-app_2/api/node_modules/encodeurl/index.js:56:20
+      7  100.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/finalhandler/index.js:86:19
+      6   85.7%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:640:19
+      6  100.0%            LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      1   14.3%          LazyCompile: *<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:640:19
+      1  100.0%            LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      6    2.7%      LazyCompile: *_init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:690:17
+      6  100.0%        LazyCompile: *init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:676:14
+      6  100.0%          Function: ^Document.$__init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:588:38
+      4   66.7%            Function: ^syncWrapper /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:232:30
+      2   33.3%            LazyCompile: *syncWrapper /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:232:30
+      5    2.3%      T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   20.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1   20.0%        LazyCompile: *json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+      1  100.0%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/categories.js:14:17
+      1  100.0%            T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   20.0%        Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1   20.0%        Function: ^clearBuffer node:internal/streams/writable:532:21
+      1  100.0%          LazyCompile: *end node:_http_outgoing:1004:45
+      1  100.0%            LazyCompile: *send /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:111:25
+      1   20.0%        Function: ^Module node:internal/modules/cjs/loader:251:16
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:946:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1223:36
+      5    2.3%      LazyCompile: *setHeader node:_http_outgoing:646:57
+      3   60.0%        LazyCompile: *json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+      1   33.3%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/users.js:41:23
+      1  100.0%            T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   33.3%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/posts.js:60:20
+      1  100.0%            T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   33.3%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/posts.js:41:23
+      1  100.0%            T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   20.0%        Function: ^header /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:777:29
+      1  100.0%          Function: ^json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+      1  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/posts.js:41:23
+      1   20.0%        Function: ^expressInit /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%          LazyCompile: *trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      5    2.3%      LazyCompile: *ObjectID /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/objectid.js:37:33
+      5  100.0%        LazyCompile: ~castObjectId /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/cast/objectid.js:6:39
+      5  100.0%          Function: ^ObjectId.cast /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/objectid.js:224:35
+      5  100.0%            Function: ^SchemaType.applySetters /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1116:45
+      4    1.8%      Function: ^format /Users/alexsandr/Downloads/blog-app_2/api/node_modules/content-type/index.js:65:17
+      2   50.0%        LazyCompile: *send /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:111:25
+      2  100.0%          Function: ^json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+      1   50.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/posts.js:70:17
+      1   50.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/posts.js:41:23
+      2   50.0%        Function: ^setCharset /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/utils.js:246:41
+      2  100.0%          Function: ^send /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:111:25
+      2  100.0%            Function: ^json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+      4    1.8%      Function: ^expressInit /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/middleware/init.js:29:30
+      3   75.0%        LazyCompile: *trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      3  100.0%          LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      3  100.0%            Function: ^query /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/middleware/query.js:39:24
+      1   25.0%        Function: ^handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      4    1.8%      Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:204:37
+      4  100.0%        Function: ^optionsCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:198:34
+      4  100.0%          Function: ^corsMiddleware /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:203:35
+      4  100.0%            LazyCompile: *trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      3    1.4%      LazyCompile: *expressInit /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/middleware/init.js:29:30
+      3  100.0%        LazyCompile: *trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      3  100.0%          LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      3  100.0%            LazyCompile: *query /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/middleware/query.js:39:24
+      3    1.4%      LazyCompile: *applyHeaders /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:144:24
+      3  100.0%        LazyCompile: *applyHeaders /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:144:24
+      3  100.0%          LazyCompile: *applyHeaders /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:144:24
+      1   33.3%            LazyCompile: *cors /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:159:16
+      1   33.3%            LazyCompile: *<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:204:37
+      1   33.3%            Function: ^cors /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:159:16
+      3    1.4%      LazyCompile: *Query /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:63:15
+      3  100.0%        Function: ^model.Query /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:4984:25
+      3  100.0%          Function: ^findOne /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:2248:33
+      3  100.0%            Function: ^findById /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:2206:35
+      3    1.4%      LazyCompile: *Document.$toObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3279:40
+      2   66.7%        Function: ^Document.toJSON /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3822:37
+      2  100.0%          T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      2  100.0%            Function: ^stringify /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:1155:20
+      1   33.3%        Function: ^Document.toObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3559:39
+      1  100.0%          Function: ^Model.$__handleSave /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:239:41
+      1  100.0%            Function: ^Model.$__save /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:375:35
+      3    1.4%      LazyCompile: *Document /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:73:18
+      3  100.0%        Function: ^Model /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:100:15
+      2   66.7%          Function: ^model /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:4911:27
+      2  100.0%            Function: ^createModel /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/queryhelpers.js:95:43
+      1   33.3%          LazyCompile: *model /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:4911:27
+      1  100.0%            LazyCompile: *completeMany /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/query/completeMany.js:22:22
+      3    1.4%      Function: ^toError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/utils.js:126:23
+      3  100.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/operations/common_functions.js:252:64
+      3  100.0%          Function: ^handler /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology.js:960:21
+      3  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection_pool.js:347:21
+      3    1.4%      Function: ^stringify /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:1155:20
+      3  100.0%        Function: ^json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+      2   66.7%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/posts.js:70:17
+      2  100.0%            T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   33.3%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/categories.js:14:17
+      1  100.0%            T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    1.4%      Function: ^removeHeader node:_http_outgoing:774:63
+      3  100.0%        Function: ^write /Users/alexsandr/Downloads/blog-app_2/api/node_modules/finalhandler/index.js:275:18
+      3  100.0%          Function: ^send /Users/alexsandr/Downloads/blog-app_2/api/node_modules/finalhandler/index.js:274:15
+      3  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/finalhandler/index.js:86:19
+      3    1.4%      Function: ^parse /Users/alexsandr/Downloads/blog-app_2/api/node_modules/content-type/index.js:106:16
+      2   66.7%        Function: ^setCharset /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/utils.js:246:41
+      2  100.0%          Function: ^send /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:111:25
+      2  100.0%            Function: ^json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+      1   33.3%        LazyCompile: *send /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:111:25
+      1  100.0%          LazyCompile: *json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+      1  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/users.js:41:23
+      3    1.4%      Function: ^databaseNamespace /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/wireprotocol/shared.js:96:27
+      2   66.7%        Function: ^_command /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/wireprotocol/command.js:41:18
+      2  100.0%          Function: ^command /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/wireprotocol/command.js:19:17
+      2  100.0%            Function: ^command /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection.js:183:10
+      1   33.3%        Function: ^Msg /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/msg.js:45:14
+      1  100.0%          Function: ^_command /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/wireprotocol/command.js:41:18
+      1  100.0%            Function: ^command /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/wireprotocol/command.js:19:17
+      3    1.4%      Function: ^ObjectID /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/objectid.js:37:33
+      3  100.0%        LazyCompile: ~castObjectId /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/cast/objectid.js:6:39
+      3  100.0%          Function: ^ObjectId.cast /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/objectid.js:224:35
+      3  100.0%            Function: ^SchemaType.applySetters /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1116:45
+     93    3.0%    Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+     93  100.0%      Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     62   66.7%        LazyCompile: *writeOrBuffer node:internal/streams/writable:368:23
+     61   98.4%          LazyCompile: *_write node:internal/streams/writable:286:16
+     61  100.0%            Function: ^Writable.write node:internal/streams/writable:336:36
+      1    1.6%          Function: ^_write node:internal/streams/writable:286:16
+      1  100.0%            Function: ^Writable.write node:internal/streams/writable:336:36
+     31   33.3%        Function: ^Socket._writeGeneric node:net:931:42
+     31  100.0%          Function: ^Socket._write node:net:973:35
+     31  100.0%            Function: ^writeOrBuffer node:internal/streams/writable:368:23
+     75    2.4%    Function: ^MongooseError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/mongooseError.js:7:1
+     35   46.7%      Function: ^CastError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/cast.js:21:14
+     21   60.0%        Function: ^exec /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4494:37
+     21  100.0%          Function: ^Query.then /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4591:32
+     21  100.0%            T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+     14   40.0%        Function: ^ObjectId.cast /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/objectid.js:224:35
+     14  100.0%          Function: ^SchemaType.applySetters /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1116:45
+     14  100.0%            LazyCompile: ~SchemaType._castForQuery /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1600:46
+     22   29.3%      Function: ^MongooseServerSelectionError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/serverSelection.js:26:1
+     22  100.0%        Function: ^Model.$wrapCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:5094:31
+     16   72.7%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4509:38
+     12   75.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:22
+      4   25.0%            LazyCompile: *exec /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4494:37
+      6   27.3%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:503:58
+      6  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:31:22
+     10   13.3%      Function: ^ParallelSaveError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/parallelSave.js:16:14
+     10  100.0%        Function: ^Model.save /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:481:32
+     10  100.0%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/categories.js:4:18
+      5   50.0%            Function: ^handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/layer.js:86:49
+      4   40.0%            LazyCompile: *dispatch /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/route.js:101:45
+      1   10.0%            LazyCompile: *handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/layer.js:86:49
+      4    5.3%      Function: ^VersionError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/version.js:18:14
+      4  100.0%        Function: ^generateVersionError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:438:30
+      4  100.0%          Function: ^Model.save /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:481:32
+      4  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/routes/categories.js:4:18
+      4    5.3%      Function: ^ParallelValidateError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/parallelValidate.js:17:14
+      4  100.0%        Function: ^Document.validate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:2251:39
+      4  100.0%          Function: ^validateBeforeSave /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/plugins/validateBeforeSave.js:9:56
+      4  100.0%            Function: ^callMiddlewareFunction /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:480:32
+     68    2.2%    Function: ^readSync node:fs:701:18
+     68  100.0%      Function: ^tryReadSync node:fs:440:21
+     68  100.0%        Function: ^readFileSync node:fs:461:22
+     61   89.7%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1377:37
+     61  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1190:33
+      5    7.4%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1377:37
+      5  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1190:33
+      2    2.9%          LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1430:39
+      2  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1190:33
+     51    1.6%    LazyCompile: *deserializeObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+     43   84.3%      LazyCompile: *deserializeObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+     31   72.1%        LazyCompile: *deserializeObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+     16   51.6%          LazyCompile: *deserializeObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+     15   93.8%            Function: ^deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      1    6.3%            LazyCompile: *deserializeObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:43:33
+     15   48.4%          Function: ^deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+     15  100.0%            Function: ^BSON.deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/bson.js:134:38
+     12   27.9%        Function: ^deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+     12  100.0%          Function: ^BSON.deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/bson.js:134:38
+     12  100.0%            Function: ^parse /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/msg.js:178:8
+      8   15.7%      Function: ^deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/parser/deserializer.js:19:27
+      8  100.0%        Function: ^BSON.deserialize /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bson/lib/bson/bson.js:134:38
+      8  100.0%          Function: ^parse /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/msg.js:178:8
+      8  100.0%            Function: ^messageHandler /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection.js:251:33
+     44    1.4%    LazyCompile: *clone /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/clone.js:30:15
+     35   79.5%      LazyCompile: *Document.$toObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3279:40
+     30   85.7%        Function: ^Document.toJSON /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3822:37
+     30  100.0%          T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+     16   53.3%            LazyCompile: *json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+     14   46.7%            Function: ^stringify /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:1155:20
+      5   14.3%        Function: ^Document.toObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3559:39
+      5  100.0%          Function: ^Model.$__handleSave /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:239:41
+      5  100.0%            Function: ^Model.$__save /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:375:35
+      5   11.4%      Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1198:30
+      5  100.0%        T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      5  100.0%          Function: ^SchemaType.doValidate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1183:43
+      5  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:2537:23
+      2    4.5%      LazyCompile: *cloneObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/clone.js:109:21
+      2  100.0%        LazyCompile: *clone /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/clone.js:30:15
+      2  100.0%          LazyCompile: *Document.$toObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3279:40
+      2  100.0%            Function: ^Document.toObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3559:39
+      2    4.5%      Function: ^Document.$toObject /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3279:40
+      2  100.0%        Function: ^Document.toJSON /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3822:37
+      2  100.0%          T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      2  100.0%            Function: ^stringify /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:1155:20
+     35    1.1%    LazyCompile: *CastError /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/error/cast.js:21:14
+     20   57.1%      LazyCompile: *exec /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4494:37
+     20  100.0%        Function: ^Query.then /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4591:32
+     20  100.0%          T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+     20  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      8   22.9%      Function: ^ObjectId.cast /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/objectid.js:224:35
+      8  100.0%        Function: ^SchemaType.applySetters /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1116:45
+      8  100.0%          LazyCompile: ~SchemaType._castForQuery /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1600:46
+      8  100.0%            LazyCompile: ~SchemaType.castForQuery /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1581:45
+      7   20.0%      Function: ^exec /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4494:37
+      7  100.0%        Function: ^Query.then /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4591:32
+      7  100.0%          T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      7  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+     34    1.1%    LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+     21   61.8%      LazyCompile: *handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:136:31
+     21  100.0%        Function: ^router /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:46:18
+     21  100.0%          LazyCompile: *trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+     21  100.0%            LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      3    8.8%      Function: ^handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:136:31
+      3  100.0%        Function: ^router /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:46:18
+      3  100.0%          Function: ^handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            Function: ^trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      2    5.9%      LazyCompile: *jsonParser /Users/alexsandr/Downloads/blog-app_2/api/node_modules/body-parser/lib/types/json.js:101:30
+      2  100.0%        LazyCompile: *trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      2  100.0%          LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      1   50.0%            LazyCompile: *jsonParser /Users/alexsandr/Downloads/blog-app_2/api/node_modules/body-parser/lib/types/json.js:101:30
+      1   50.0%            LazyCompile: *expressInit /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/middleware/init.js:29:30
+      2    5.9%      Function: ^jsonParser /Users/alexsandr/Downloads/blog-app_2/api/node_modules/body-parser/lib/types/json.js:101:30
+      2  100.0%        LazyCompile: *trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      2  100.0%          LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      1   50.0%            LazyCompile: *expressInit /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/middleware/init.js:29:30
+      1   50.0%            Function: ^expressInit /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/middleware/init.js:29:30
+      2    5.9%      Function: ^cors /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:159:16
+      2  100.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:219:57
+      2  100.0%          Function: ^originCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:213:39
+      2  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:204:37
+      1    2.9%      LazyCompile: *cors /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:159:16
+      1  100.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:219:57
+      1  100.0%          Function: ^originCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:213:39
+      1  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:204:37
+      1    2.9%      LazyCompile: *<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:204:37
+      1  100.0%        Function: ^optionsCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:198:34
+      1  100.0%          Function: ^corsMiddleware /Users/alexsandr/Downloads/blog-app_2/api/node_modules/cors/lib/index.js:203:35
+      1  100.0%            LazyCompile: *trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      1    2.9%      Function: ^expressInit /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%        Function: ^handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      1    2.9%      Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/body-parser/lib/read.js:79:34
+      1  100.0%        Function: ^runInAsyncScope node:async_hooks:197:18
+      1  100.0%          Function: ^invokeCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/raw-body/index.js:230:29
+      1  100.0%            Function: ^done /Users/alexsandr/Downloads/blog-app_2/api/node_modules/raw-body/index.js:213:17
+     33    1.1%    LazyCompile: *nextTick node:internal/process/task_queues:103:18
+      5   15.2%      LazyCompile: *Readable.read node:internal/streams/readable:446:35
+      3   60.0%        Function: ^flow node:internal/streams/readable:1061:14
+      2   66.7%          LazyCompile: *readableAddChunk node:internal/streams/readable:286:26
+      2  100.0%            Function: ^Readable.push node:internal/streams/readable:277:35
+      1   33.3%          Function: ^resume_ node:internal/streams/readable:1037:17
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      2   40.0%        LazyCompile: *flow node:internal/streams/readable:1061:14
+      1   50.0%          LazyCompile: *readableAddChunk node:internal/streams/readable:286:26
+      1  100.0%            Function: ^Readable.push node:internal/streams/readable:277:35
+      1   50.0%          Function: ^resume_ node:internal/streams/readable:1037:17
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      5   15.2%      Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:369:20
+      4   80.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4517:43
+      4  100.0%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:22:37
+      4  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1   20.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:2290:38
+      1  100.0%          Function: ^promiseOrCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/promiseOrCallback.js:8:44
+      1  100.0%            Function: ^Document.validate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:2251:39
+      4   12.1%      Function: ^emitReadable node:internal/streams/readable:618:22
+      3   75.0%        LazyCompile: *readableAddChunk node:internal/streams/readable:286:26
+      3  100.0%          Function: ^Readable.push node:internal/streams/readable:277:35
+      3  100.0%            Function: ^parserOnMessageComplete node:_http_common:137:33
+      1   25.0%        Function: ^onEofChunk node:internal/streams/readable:588:20
+      1  100.0%          Function: ^readableAddChunk node:internal/streams/readable:286:26
+      1  100.0%            Function: ^Readable.push node:internal/streams/readable:277:35
+      4   12.1%      Function: ^Kareem.execPost /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:120:37
+      2   50.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4527:30
+      2  100.0%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:4562:18
+      2  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/query/completeMany.js:36:26
+      2   50.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:376:31
+      2  100.0%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/model.js:297:69
+      2  100.0%            Function: ^collectionOperationCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:211:54
+      3    9.1%      Function: ^onwrite node:internal/streams/writable:428:17
+      2   66.7%        Function: ^afterWriteDispatched node:internal/stream_base_commons:155:30
+      2  100.0%          Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      2  100.0%            Function: ^Socket._writeGeneric node:net:931:42
+      1   33.3%        LazyCompile: *writevGeneric node:internal/stream_base_commons:122:23
+      1  100.0%          Function: ^Socket._writeGeneric node:net:931:42
+      1  100.0%            Function: ^Socket._writev node:net:968:36
+      2    6.1%      LazyCompile: *completeMany /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/query/completeMany.js:22:22
+      2  100.0%        Function: ^cb /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:2027:14
+      2  100.0%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/utils.js:692:14
+      2  100.0%            Function: ^handleCallback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/utils.js:104:30
+      2    6.1%      Function: ^resOnFinish node:_http_server:969:21
+      1   50.0%        LazyCompile: *emit node:events:464:44
+      1  100.0%          Function: ^onFinish node:_http_outgoing:999:18
+      1  100.0%            Function: ^callback node:internal/streams/writable:553:44
+      1   50.0%        Function: ^emit node:events:464:44
+      1  100.0%          Function: ^onFinish node:_http_outgoing:999:18
+      1  100.0%            Function: ^callback node:internal/streams/writable:553:44
+      2    6.1%      Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:500:18
+      1   50.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/plugins/validateBeforeSave.js:36:105
+      1  100.0%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:135:37
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1   50.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/plugins/saveSubdocs.js:11:45
+      1  100.0%          Function: ^callMiddlewareFunction /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:480:32
+      1  100.0%            Function: ^next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:27:22
+      1    3.0%      LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    3.0%      Function: ^resume node:internal/streams/readable:1030:16
+      1  100.0%        Function: ^Readable.resume node:internal/streams/readable:1016:37
+      1  100.0%          Function: ^Readable.on node:internal/streams/readable:927:33
+      1  100.0%            Function: ^readStream /Users/alexsandr/Downloads/blog-app_2/api/node_modules/raw-body/index.js:155:21
+      1    3.0%      Function: ^onDestroy node:internal/streams/destroy:80:21
+      1  100.0%        LazyCompile: ~Socket._destroy node:net:804:37
+      1  100.0%          Function: ^_destroy node:internal/streams/destroy:77:18
+      1  100.0%            Function: ^destroy node:internal/streams/destroy:39:17
+      1    3.0%      Function: ^maybeReadMore node:internal/streams/readable:657:23
+      1  100.0%        Function: ^addChunk node:internal/streams/readable:356:18
+      1  100.0%          Function: ^readableAddChunk node:internal/streams/readable:286:26
+      1  100.0%            Function: ^Readable.push node:internal/streams/readable:277:35
+      1    3.0%      Function: ^immediate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/immediate.js:12:36
+      1  100.0%        Function: ^validatePath /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:2529:24
+      1  100.0%          Function: ^Document.$__validate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:2437:42
+      1  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:370:24
+      1    3.0%      Function: ^checkIn /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection_pool.js:246:10
+      1  100.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection_pool.js:347:21
+      1  100.0%          Function: ^handleOperationResult /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/server.js:529:40
+      1  100.0%            Function: ^messageHandler /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection.js:251:33
+     32    1.0%    LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+
+   2919   41.5%  T _posix_spawnattr_setmacpolicyinfo_np
+
+     85    1.2%  T _semaphore_destroy
+     54   63.5%    LazyCompile: *writevGeneric node:internal/stream_base_commons:122:23
+     45   83.3%      LazyCompile: *clearBuffer node:internal/streams/writable:532:21
+     45  100.0%        LazyCompile: *end node:_http_outgoing:1004:45
+     31   68.9%          LazyCompile: *send /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:111:25
+     20   64.5%            LazyCompile: *json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+     11   35.5%            Function: ^json /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/response.js:250:25
+     10   22.2%          Function: ^write /Users/alexsandr/Downloads/blog-app_2/api/node_modules/finalhandler/index.js:275:18
+     10  100.0%            Function: ^send /Users/alexsandr/Downloads/blog-app_2/api/node_modules/finalhandler/index.js:274:15
+      4    8.9%          LazyCompile: *write /Users/alexsandr/Downloads/blog-app_2/api/node_modules/finalhandler/index.js:275:18
+      4  100.0%            Function: ^send /Users/alexsandr/Downloads/blog-app_2/api/node_modules/finalhandler/index.js:274:15
+      9   16.7%      Function: ^Socket._writeGeneric node:net:931:42
+      9  100.0%        Function: ^Socket._writev node:net:968:36
+      9  100.0%          Function: ^doWrite node:internal/streams/writable:401:17
+      9  100.0%            Function: ^clearBuffer node:internal/streams/writable:532:21
+      2    2.4%    T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1   50.0%      LazyCompile: ~prepareHandshakeDocument /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/connect.js:170:34
+      1  100.0%        LazyCompile: ~performInitialHandshake /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/connect.js:70:33
+      1  100.0%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/connect.js:30:54
+      1  100.0%            LazyCompile: ~callback /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/connect.js:295:28
+      1   50.0%      Function: ^$set /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:946:40
+      1  100.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/timestamps/setupTimestamps.js:40:30
+      1  100.0%          Function: ^callMiddlewareFunction /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:480:32
+      1  100.0%            Function: ^next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:27:22
+      2    2.4%    LazyCompile: ~serverUpdateHandler /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology.js:515:22
+      1   50.0%      LazyCompile: *emit node:events:464:44
+      1  100.0%        Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/server.js:153:51
+      1  100.0%          LazyCompile: *emit node:events:464:44
+      1  100.0%            LazyCompile: ~<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/monitor.js:232:62
+      1   50.0%      Function: ^emit node:events:464:44
+      1  100.0%        LazyCompile: ~<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/server.js:153:51
+      1  100.0%          Function: ^emit node:events:464:44
+      1  100.0%            LazyCompile: ~<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/monitor.js:273:64
+      1    1.2%    LazyCompile: ~updateRsFromPrimary /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology_description.js:339:29
+      1  100.0%      Function: ^update /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology_description.js:141:9
+      1  100.0%        Function: ^serverUpdateHandler /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology.js:515:22
+      1  100.0%          Function: ^emit node:events:464:44
+      1  100.0%            Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/server.js:153:51
+      1    1.2%    LazyCompile: ~tryCreateBuffer node:fs:425:25
+      1  100.0%      Function: ^readFileSync node:fs:461:22
+      1  100.0%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1377:37
+      1  100.0%          LazyCompile: ~Module.load node:internal/modules/cjs/loader:1190:33
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:946:24
+      1    1.2%    LazyCompile: ~parserOnIncoming node:_http_server:1027:26
+      1  100.0%      LazyCompile: ~parserOnHeadersComplete node:_http_common:72:33
+      1    1.2%    LazyCompile: ~next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:177:16
+      1  100.0%      LazyCompile: ~query /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/middleware/query.js:39:24
+      1  100.0%        LazyCompile: ~handle /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          LazyCompile: ~trim_prefix /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/express/lib/router/index.js:280:64
+      1    1.2%    LazyCompile: ~isSelected /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:2101:52
+      1  100.0%      Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/timestamps/setupTimestamps.js:40:30
+      1  100.0%        Function: ^callMiddlewareFunction /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:480:32
+      1  100.0%          Function: ^next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:27:22
+      1  100.0%            Function: ^_next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:89:17
+      1    1.2%    LazyCompile: ~detachSocket node:_http_server:293:62
+      1  100.0%      LazyCompile: ~resOnFinish node:_http_server:969:21
+      1  100.0%        Function: ^emit node:events:464:44
+      1  100.0%          LazyCompile: ~onFinish node:_http_outgoing:999:18
+      1  100.0%            Function: ^callback node:internal/streams/writable:553:44
+      1    1.2%    LazyCompile: ~debug node:internal/util/debuglog:82:15
+      1  100.0%      LazyCompile: ~logger node:internal/util/debuglog:101:18
+      1  100.0%        LazyCompile: ~onWriteComplete node:internal/stream_base_commons:80:25
+      1    1.2%    LazyCompile: ~construct node:internal/streams/destroy:219:19
+      1  100.0%      Function: ^Readable node:internal/streams/readable:221:18
+      1  100.0%        Function: ^IncomingMessage node:_http_incoming:53:25
+      1  100.0%          Function: ^parserOnHeadersComplete node:_http_common:72:33
+      1    1.2%    LazyCompile: ~checkRequired /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema/string.js:562:62
+      1  100.0%      LazyCompile: ~requiredValidator /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:983:36
+      1  100.0%        LazyCompile: ~<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1198:30
+      1  100.0%          T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: ~SchemaType.doValidate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schematype.js:1183:43
+      1    1.2%    LazyCompile: ~arrayStrictEqual /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/utils.js:183:26
+      1  100.0%      LazyCompile: ~equals /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/server_description.js:140:9
+      1  100.0%        LazyCompile: ~serverUpdateHandler /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology.js:515:22
+      1  100.0%          LazyCompile: *emit node:events:464:44
+      1  100.0%            LazyCompile: ~<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/server.js:153:51
+      1    1.2%    LazyCompile: ~_setCursorNotifiedImpl /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/cursor.js:693:32
+      1  100.0%      Function: ^setCursorNotified /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/cursor.js:689:27
+      1  100.0%        Function: ^setCursorDeadAndNotified /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/cursor.js:681:34
+      1  100.0%          LazyCompile: ~nextFunction /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/cursor.js:706:22
+      1  100.0%            Function: ^_next /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/cursor.js:208:8
+      1    1.2%    LazyCompile: ~_init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:690:17
+      1  100.0%      LazyCompile: ~init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:676:14
+      1  100.0%        LazyCompile: ~Document.$__init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:588:38
+      1  100.0%          LazyCompile: ~syncWrapper /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:232:30
+      1  100.0%            LazyCompile: ~Document.init /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:569:35
+      1    1.2%    LazyCompile: ~TLSSocket node:_tls_wrap:512:19
+      1  100.0%      Function: ^connect node:_tls_wrap:1726:35
+      1  100.0%        Function: ^makeConnection /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/connect.js:269:24
+      1  100.0%          LazyCompile: ~connect /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/connection/connect.js:18:17
+      1  100.0%            LazyCompile: ~createConnection /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/cmap/connection_pool.js:385:26
+      1    1.2%    LazyCompile: ~Schema.pathType /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema.js:1160:37
+      1  100.0%      LazyCompile: ~Schema.virtual /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema.js:1735:36
+      1  100.0%        LazyCompile: ~module.exports /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/plugins/idGetter.js:7:26
+      1  100.0%          LazyCompile: ~Schema.plugin /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/schema.js:1459:35
+      1  100.0%            LazyCompile: ~Document.$__setSchema /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/document.js:3131:43
+      1    1.2%    LazyCompile: ~ReadPreference.translate /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/topologies/read_preference.js:159:36
+      1  100.0%      Function: ^selectServer /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/topology.js:380:15
+      1  100.0%        Function: ^executeWithServerSelection /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/operations/execute_operation.js:91:36
+      1  100.0%          Function: ^<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/operations/execute_operation.js:34:37
+      1  100.0%            Function: ^maybePromise /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/utils.js:679:22
+      1    1.2%    LazyCompile: ~MongoClient /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/mongo_client.js:195:21
+      1  100.0%      LazyCompile: ~<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/connection.js:832:31
+      1  100.0%        T node::builtins::SetInternalLoaders(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          LazyCompile: ~Connection.openUri /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/connection.js:680:40
+      1  100.0%            LazyCompile: ~<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/index.js:350:49
+      1    1.2%    LazyCompile: ~Module._resolveLookupPaths node:internal/modules/cjs/loader:835:38
+      1  100.0%      LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:1054:35
+      1  100.0%        LazyCompile: ~Module._load node:internal/modules/cjs/loader:946:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1223:36
+      1  100.0%            Function: ^require node:internal/modules/helpers:175:31
+      1    1.2%    LazyCompile: ~BufferList /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bl/node_modules/readable-stream/lib/internal/streams/BufferList.js:13:22
+      1  100.0%      LazyCompile: ~ReadableState /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bl/node_modules/readable-stream/lib/_stream_readable.js:101:23
+      1  100.0%        LazyCompile: ~Readable /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bl/node_modules/readable-stream/lib/_stream_readable.js:178:18
+      1  100.0%          LazyCompile: ~Duplex /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bl/node_modules/readable-stream/lib/_stream_duplex.js:64:16
+      1  100.0%            LazyCompile: ~BufferList /Users/alexsandr/Downloads/blog-app_2/api/node_modules/bl/bl.js:6:21
+      1    1.2%    LazyCompile: ~<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/query.js:2001:43
+      1  100.0%      LazyCompile: ~_wrappedThunk /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongoose/lib/helpers/query/wrapThunk.js:13:32
+      1  100.0%        LazyCompile: ~<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/kareem/index.js:370:24
+      1  100.0%          Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.2%    LazyCompile: ~<anonymous> /Users/alexsandr/Downloads/blog-app_2/api/node_modules/mongodb/lib/core/sdam/monitor.js:396:7
+      1  100.0%      Function: ^listOnTimeout node:internal/timers:517:25
+      1  100.0%        Function: ^processTimers node:internal/timers:497:25
+      1    1.2%    LazyCompile: *parserOnHeadersComplete node:_http_common:72:33
+

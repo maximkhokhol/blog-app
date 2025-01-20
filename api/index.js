@@ -1,8 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-
-const app = express();
-
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const authRoute = require('./routes/auth');
@@ -11,6 +8,7 @@ const postRoute = require('./routes/posts');
 const categoryRoute = require('./routes/categories');
 const multer = require('multer');
 const path = require('path');
+const fs = require('fs');
 
 dotenv.config();
 
@@ -36,9 +34,39 @@ mongoose
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: true,
+    maxPoolSize: 100,
   })
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.log(err));
+
+if (process.env.NODE_ENV === 'development') {
+  const logStream = fs.createWriteStream('mongoose-duration.log', {
+    flags: 'a',
+  });
+
+  logStream.on('error', (err) => {
+    console.error('Failed to write to log file:', err);
+  });
+
+  mongoose.set('debug', function (collectionName, method, query, doc, options) {
+    const startTime = Date.now();
+
+    // Выполняем основное логирование сразу
+    const logMessage =
+      `[${new Date().toISOString()}] ${collectionName}.${method} ` +
+      `${JSON.stringify(query)} ${JSON.stringify(options)} | Start Time: ${startTime}\n`;
+    logStream.write(logMessage);
+
+    // Обновляем лог по завершении запроса
+    process.nextTick(() => {
+      const duration = Date.now() - startTime;
+      const durationMessage =
+        `[${new Date().toISOString()}] ${collectionName}.${method} ` +
+        `${JSON.stringify(query)} ${JSON.stringify(options)} | Duration: ${duration}ms\n`;
+      logStream.write(durationMessage);
+    });
+  });
+}
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -61,7 +89,7 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
   });
 });
 
-app.use('/api/auth', authRoute);
+app.use('/api/auth', authRoute); // 1
 app.use('/api/users', userRoute);
 app.use('/api/posts', postRoute);
 app.use('/api/categories', categoryRoute);

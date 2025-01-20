@@ -20,14 +20,13 @@ export default function () {
     '/posts',
     '/register',
     '/login',
-    '/post/1',
-    '/post/2',
+    '/post/6775e9835c8518858052e5d5',
     '/write',
     '/settings',
   ];
 
   routes.forEach((route) => {
-    let res = http.get(`http://localhost:4173${route}`);
+    let res = http.get(`http://127.0.0.1:4173${route}`);
     check(res, {
       [`${route} status is 200`]: (r) => r.status === 200,
       [`${route} response time < 500ms`]: (r) => r.timings.duration < 500,
