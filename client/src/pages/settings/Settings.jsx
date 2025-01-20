@@ -57,6 +57,7 @@ export default function Settings() {
           <label>Profile Picture</label>
           <div className="settingsPP">
             <img
+              width={'100%'}
               src={
                 file
                   ? URL.createObjectURL(file)

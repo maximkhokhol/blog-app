@@ -1,4 +1,4 @@
-import { useContext, useState, useRef } from 'react';
+import { useContext, useRef, useState } from 'react';
 import axios from 'axios';
 import { Context } from '../../context/Context';
 import './write.css';
@@ -51,6 +51,8 @@ export default function Write() {
     <div className="write">
       {file && (
         <img
+          width={'100%'}
+          height={'250'}
           className="writeImg"
           src={URL.createObjectURL(file)}
           alt="Preview"
@@ -79,7 +81,6 @@ export default function Write() {
           <textarea
             className="writeInput writeText"
             placeholder="Tell your story..."
-            type="text"
             autoFocus={true}
             ref={textareaRef}
             value={content}

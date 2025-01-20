@@ -1,6 +1,5 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Context } from '../../context/Context';
-import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './topbar.css';
 
@@ -80,6 +79,8 @@ export default function Topbar() {
         {user ? (
           <Link className="link" to="/settings">
             <img
+              width="40"
+              height="40"
               className="topImg"
               src={user.profilePic ? PF + user.profilePic : PF + 'profile.jpg'}
               alt={user.username}
